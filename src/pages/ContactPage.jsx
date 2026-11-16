@@ -24,6 +24,8 @@ const aboutValues = [
   { icon: BadgeCheck, label: 'Qualité' },
 ];
 
+const totalLocations = siteConfig.locations.reduce((sum, location) => sum + location.points.length, 0);
+
 const initialForm = {
   name: '',
   email: '',
@@ -103,6 +105,12 @@ function ContactPage() {
           <div>
             <h2 className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">Adresse</h2>
             <p className="mt-1 text-sm font-semibold leading-5 text-brand-navy">{siteConfig.address}</p>
+            <a
+              href="#points-de-vente"
+              className="mt-1.5 inline-flex items-center gap-1 text-xs font-bold text-brand-red transition hover:text-brand-red-dark"
+            >
+              Voir les adresses <ArrowRight size={12} />
+            </a>
           </div>
         </div>
         <div className="flex items-start gap-3 rounded-2xl border border-blue-950/5 bg-white p-4 shadow-sm">
@@ -366,6 +374,64 @@ function ContactPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="points-de-vente" className="mt-10 scroll-mt-28 md:mt-14">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <span className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.22em] text-brand-red">
+              <span className="h-px w-8 bg-brand-red/70" aria-hidden="true" />
+              Points de vente
+            </span>
+            <h2 className="mt-3 font-heading text-2xl font-bold uppercase leading-tight text-brand-navy md:text-3xl">
+              Nos adresses en République Démocratique du Congo
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+              Retrouvez nos points de vente ville par ville. Pour toute précision sur une adresse ou une disponibilité,
+              notre équipe reste à votre écoute.
+            </p>
+          </div>
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand-navy/10 bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-navy shadow-sm">
+            <MapPin size={13} className="text-brand-red" />
+            {totalLocations} adresses · {siteConfig.locations.length} villes
+          </span>
+        </div>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          {siteConfig.locations.map((location) => (
+            <article
+              key={location.city}
+              className="flex h-full flex-col rounded-[24px] border border-blue-950/5 bg-white p-5 shadow-card"
+            >
+              <div className="flex items-center justify-between gap-3 border-b border-blue-950/5 pb-4">
+                <div className="flex min-w-0 items-center gap-3">
+                  <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand-sky text-brand-blue">
+                    <MapPin size={18} />
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="truncate font-heading text-lg font-bold uppercase leading-none text-brand-navy">
+                      {location.city}
+                    </h3>
+                    <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">
+                      Points de vente
+                    </p>
+                  </div>
+                </div>
+                <span className="grid size-7 shrink-0 place-items-center rounded-full bg-brand-cream text-[11px] font-bold text-brand-red">
+                  {location.points.length}
+                </span>
+              </div>
+              <ul className="mt-3 grid gap-2.5 sm:grid-cols-2 sm:gap-x-6">
+                {location.points.map((point) => (
+                  <li key={point} className="flex gap-2.5 text-[13px] leading-5 text-slate-600">
+                    <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-brand-red/70" aria-hidden="true" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </section>
     </section>

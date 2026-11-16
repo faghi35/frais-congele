@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { Link, NavLink, Route, Routes } from 'react-router-dom';
 import { BrandLockup, BrandName, LogoMark } from './components/Logo';
+import Preloader from './components/Preloader';
 import ScrollToTop from './components/ScrollToTop';
 import { navigation, siteConfig } from './config/siteConfig';
 import { categories, promotions } from './data/products';
@@ -236,6 +237,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#f4f6fb] font-sans text-slate-900">
+      <Preloader />
       <ScrollToTop />
       <a
         href="#contenu"
