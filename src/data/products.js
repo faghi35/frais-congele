@@ -1,0 +1,152 @@
+const poster = (fileName) => `/images/products/png/${fileName}`;
+
+export const categories = [
+  {
+    id: 'poissons',
+    name: 'Poissons & produits de mer',
+    description: 'Poissons entiers, sardines et produits de la mer pour tous les besoins.',
+    image: poster('505599096_122124865190835103_978545969160029087_n.png'),
+    featuredImage: poster('518376449_122133373898835103_5028936630482251174_n.png'),
+  },
+  {
+    id: 'viandes-volailles',
+    name: 'Viandes & volailles',
+    description: 'Volaille, saucisses et viandes sélectionnées pour les repas du quotidien.',
+    image: poster('540937978_122141681636835103_5310818195432499636_n.png'),
+    featuredImage: poster('514717510_17857875201448726_5113241875405094204_n.png'),
+  },
+  {
+    id: 'huiles',
+    name: 'Huiles & condiments',
+    description: 'Huiles végétales et essentiels de cuisine en différents formats.',
+    image: poster('502488225_122120366096835103_1626432328984949129_n.png'),
+    featuredImage: poster('546294004_122143625258835103_1651648818239056857_n.png'),
+  },
+  {
+    id: 'epicerie',
+    name: 'Épicerie & boissons',
+    description: 'Produits laitiers, boissons et références de grande consommation.',
+    image: poster('499014057_122118040082835103_3883745978127469958_n.png'),
+    featuredImage: poster('502431332_122120120642835103_282435830133942516_n.png'),
+  },
+];
+
+export const products = [
+  {
+    id: 'ndakala-fresh',
+    name: 'N’Dakala Fresh',
+    category: 'Poissons & produits de mer',
+    categoryId: 'poissons',
+    description: 'Une sélection de poissons du lac, proposée selon les disponibilités.',
+    image: poster('505599096_122124865190835103_978545969160029087_n.png'),
+  },
+  {
+    id: 'sardines',
+    name: 'Sardines',
+    category: 'Poissons & produits de mer',
+    categoryId: 'poissons',
+    description: 'Une offre de poissons adaptée à la vente au détail et aux professionnels.',
+    image: poster('518376449_122133373898835103_5028936630482251174_n.png'),
+  },
+  {
+    id: 'poisson-bombay',
+    name: 'Poisson Bombay Duck',
+    category: 'Poissons & produits de mer',
+    categoryId: 'poissons',
+    description: 'Produit disponible selon les arrivages et les points de vente.',
+    image: poster('518389386_122133198518835103_3419444962695102373_n.png'),
+  },
+  {
+    id: 'tilapia',
+    name: 'Tilapia',
+    category: 'Poissons & produits de mer',
+    categoryId: 'poissons',
+    description: 'Poisson entier, pour les repas familiaux et les achats en quantité.',
+    image: poster('523118373_122134679372835103_7861276424141838863_n.png'),
+  },
+  {
+    id: 'mama-saucisson',
+    name: 'Mama Saucisson',
+    category: 'Viandes & volailles',
+    categoryId: 'viandes-volailles',
+    description: 'Saucisson en format pratique pour les repas du quotidien.',
+    image: poster('503919456_122123372498835103_6230604753134212896_n.png'),
+  },
+  {
+    id: 'pork-leg',
+    name: 'Pork leg',
+    category: 'Viandes & volailles',
+    categoryId: 'viandes-volailles',
+    description: 'Découpe de porc présentée dans les affiches produits de la marque.',
+    image: poster('514717510_17857875201448726_5113241875405094204_n.png'),
+  },
+  {
+    id: 'poulet-frank',
+    name: 'Poulet Frank',
+    category: 'Viandes & volailles',
+    categoryId: 'viandes-volailles',
+    description: 'Volaille conditionnée, disponible selon les offres en cours.',
+    image: poster('540937978_122141681636835103_5310818195432499636_n.png'),
+  },
+  {
+    id: 'aurora-breast',
+    name: 'Aurora Breast',
+    category: 'Viandes & volailles',
+    categoryId: 'viandes-volailles',
+    description: 'Blanc de poulet proposé pour les familles et les professionnels.',
+    image: poster('540954361_122141681672835103_3497828998950248343_n.png'),
+  },
+  {
+    id: 'huile-dlite',
+    name: 'Huile D’lite',
+    category: 'Huiles & condiments',
+    categoryId: 'huiles',
+    description: 'Huile de cuisson en formats individuels et familiaux.',
+    image: poster('502488225_122120366096835103_1626432328984949129_n.png'),
+  },
+  {
+    id: 'huile-soya',
+    name: 'Huile de soja',
+    category: 'Huiles & condiments',
+    categoryId: 'huiles',
+    description: 'Huile végétale présentée en bidon pour les besoins de la cuisine.',
+    image: poster('546294004_122143625258835103_1651648818239056857_n.png'),
+  },
+  {
+    id: 'nesquik',
+    name: 'Nesquik',
+    category: 'Épicerie & boissons',
+    categoryId: 'epicerie',
+    description: 'Préparation chocolatée en plusieurs formats.',
+    image: poster('499014057_122118040082835103_3883745978127469958_n.png'),
+  },
+  {
+    id: 'nido',
+    name: 'Nido',
+    category: 'Épicerie & boissons',
+    categoryId: 'epicerie',
+    description: 'Lait en poudre mis en avant dans les affiches de campagne.',
+    image: poster('546625826_122143625252835103_5823103993469598331_n.png'),
+  },
+  {
+    id: 'red-bull',
+    name: 'Red Bull',
+    category: 'Épicerie & boissons',
+    categoryId: 'epicerie',
+    description: 'Boisson énergisante disponible à l’unité et en pack.',
+    image: poster('502431332_122120120642835103_282435830133942516_n.png'),
+  },
+];
+
+export const promotions = [
+  {
+    title: 'Les offres du moment',
+    description: 'Une sélection de prix et de nouveautés à découvrir dans les affiches de campagne.',
+    image: poster('545515716_122143625180835103_6005603367225543867_n.png'),
+  },
+  {
+    title: 'Des arrivages à découvrir',
+    description: 'Poissons, épicerie et produits du quotidien selon les disponibilités en magasin.',
+    image: poster('502513165_122121059846835103_2538090251510994041_n.png'),
+  },
+];

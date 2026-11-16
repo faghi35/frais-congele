@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-label="Frais & Congelé logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#102d52"/>
+      <stop offset="100%" stop-color="#0e1e38"/>
+    </linearGradient>
+  </defs>
+  <circle cx="110" cy="110" r="104" fill="url(#bg)"/>
+  <path d="M58 146c18-46 51-69 90-69h6v25h-7c-29 0-52 19-63 52h-26zm36-18c11-11 24-17 39-17 15 0 28 6 38 17l-16 18c-6-7-13-10-22-10-8 0-15 3-21 10l-18-18zm18-61c14 0 27 8 31 23l-18 10c-2-7-7-10-13-10-7 0-12 5-12 12 0 8 6 13 14 13 8 0 14-3 18-9l17 10c-7 14-22 19-35 19-20 0-35-15-35-35 0-20 15-33 43-33z" fill="#f7f1e7" fill-rule="evenodd"/>
+  <path d="M97 55h43l-13 28h36l-52 83 12-66h-32l6-45z" fill="#f7b267" opacity="0.95"/>
+</svg>

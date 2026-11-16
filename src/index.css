@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Changa One", sans-serif;
+  --font-heading: "Arimo", sans-serif;
+  --font-sans: "Elms Sans", sans-serif;
+
+  --color-brand-blue: #173b8f;
+  --color-brand-navy: #10224f;
+  --color-brand-ink: #081530;
+  --color-brand-red: #e81f2b;
+  --color-brand-red-dark: #b8121c;
+  --color-brand-cream: #fbeedd;
+  --color-brand-gold: #e9b76a;
+  --color-brand-sky: #eef3ff;
+
+  --shadow-soft: 0 30px 70px -38px rgba(8, 21, 48, 0.55);
+  --shadow-card: 0 18px 45px -26px rgba(8, 21, 48, 0.35);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-float: float 9s ease-in-out infinite;
+  --animate-pulse-ring: pulse-ring 2.4s ease-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-2deg);
+    }
+    50% {
+      transform: translateY(-12px) rotate(2deg);
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.6;
+    }
+    70% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f4f6fb;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-red);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-brand-red);
+    color: #fff;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dot-grid-dark {
+  background-image: radial-gradient(rgba(16, 34, 79, 0.14) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.text-gradient-cream {
+  background: linear-gradient(120deg, #fff8ef 0%, #fbeedd 55%, #e9b76a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-ring {
+  background: radial-gradient(circle at center, transparent 62%, rgba(251, 238, 221, 0.16) 63%, transparent 64%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
